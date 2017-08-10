@@ -1,2 +1,2 @@
 # Plan2Go-Backend
-Backend Repository for Plan2Go Travel planner
+Repository for the backend component of Plan2Go Travel planner
