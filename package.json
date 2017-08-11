@@ -1,0 +1,23 @@
+{
+  "name": "plan2go",
+  "version": "1.0.0",
+  "description": "Repository for the backend component of Plan2Go Travel planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://lior2803@github.com/darkflare42/Plan2Go-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkflare42/Plan2Go-Backend/issues"
+  },
+  "homepage": "https://github.com/darkflare42/Plan2Go-Backend#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
