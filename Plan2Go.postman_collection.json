@@ -1,0 +1,213 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Plan2Go",
+		"_postman_id": "becba21d-4ce8-cc04-af38-3f12b9e734fb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Attraction",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/getAttractions?AttractionID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAttractions"
+					],
+					"query": [
+						{
+							"key": "AttractionID",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Attraction",
+			"request": {
+				"url": "http://localhost:3000/addAttraction",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"AttractionID\": 4,\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 123,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Attraction",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/deleteAttraction?AttractionID=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteAttraction"
+					],
+					"query": [
+						{
+							"key": "AttractionID",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Attraction",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/updateAttraction?AttractionID=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateAttraction"
+					],
+					"query": [
+						{
+							"key": "AttractionID",
+							"value": "4",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 4,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Event",
+			"request": {
+				"url": "http://localhost:3000/addEvent",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"EventDate\": \"20-10-88\",\n        \"StartTime\": \"0600\",\n        \"EventDuration\": 1,\n        \"AttractionID\": 4,\n        \"PlanID\": 0\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/deleteEvent?EventDate=20-10-88&StartTime=0600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteEvent"
+					],
+					"query": [
+						{
+							"key": "EventDate",
+							"value": "20-10-88",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "StartTime",
+							"value": "0600",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Plan",
+			"request": {
+				"url": "http://localhost:3000/addPlan",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"PlanID\": 4,\n        \"StartDate\": \"20-10-88\",\n        \"EndDate\": \"20-10-88\",\n        \"TotalBudget\": 60\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
