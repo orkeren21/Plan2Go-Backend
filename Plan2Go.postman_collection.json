@@ -11,19 +11,20 @@
 			"name": "Get Attraction",
 			"request": {
 				"url": {
-					"raw": "http://localhost:3000/getAttractions?AttractionID=1",
+					"raw": "http://localhost:3000/attractions/getAttraction?AttractionID=5",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"getAttractions"
+						"attractions",
+						"getAttraction"
 					],
 					"query": [
 						{
 							"key": "AttractionID",
-							"value": "1",
+							"value": "5",
 							"equals": true,
 							"description": ""
 						}
@@ -47,7 +48,7 @@
 		{
 			"name": "Add Attraction",
 			"request": {
-				"url": "http://localhost:3000/addAttraction",
+				"url": "http://localhost:3000/attractions/addAttraction",
 				"method": "POST",
 				"header": [
 					{
@@ -58,7 +59,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"AttractionID\": 4,\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 123,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
+					"raw": "{\n        \"AttractionID\": 5,\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 123,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
 				},
 				"description": ""
 			},
@@ -68,19 +69,20 @@
 			"name": "Delete Attraction",
 			"request": {
 				"url": {
-					"raw": "http://localhost:3000/deleteAttraction?AttractionID=2",
+					"raw": "http://localhost:3000/attractions/deleteAttraction?AttractionID=6",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"attractions",
 						"deleteAttraction"
 					],
 					"query": [
 						{
 							"key": "AttractionID",
-							"value": "2",
+							"value": "6",
 							"equals": true,
 							"description": ""
 						}
@@ -98,19 +100,20 @@
 			"name": "Update Attraction",
 			"request": {
 				"url": {
-					"raw": "http://localhost:3000/updateAttraction?AttractionID=4",
+					"raw": "http://localhost:3000/attractions/updateAttraction?AttractionID=5",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"attractions",
 						"updateAttraction"
 					],
 					"query": [
 						{
 							"key": "AttractionID",
-							"value": "4",
+							"value": "5",
 							"equals": true,
 							"description": ""
 						}
@@ -127,7 +130,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 4,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
+					"raw": "{\n        \"Title\": \"test\",\n        \"ExtraInfo\": \"NA\",\n        \"Price\": 400,\n        \"VisitDuration\": 60,\n        \"AttractionLocation\": \"Manchester\",\n        \"OpeningTimes\": \"0800-2200\"\n}"
 				},
 				"description": ""
 			},
@@ -136,7 +139,7 @@
 		{
 			"name": "Add Event",
 			"request": {
-				"url": "http://localhost:3000/addEvent",
+				"url": "http://localhost:3000/events/addEvent",
 				"method": "POST",
 				"header": [
 					{
@@ -147,7 +150,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"EventDate\": \"20-10-88\",\n        \"StartTime\": \"0600\",\n        \"EventDuration\": 1,\n        \"AttractionID\": 4,\n        \"PlanID\": 0\n}"
+					"raw": "{\n        \"EventDate\": \"28-03-87\",\n        \"StartTime\": \"0600\",\n        \"EventDuration\": 1,\n        \"AttractionID\": 4,\n        \"PlanID\": 0\n}"
 				},
 				"description": ""
 			},
@@ -157,19 +160,20 @@
 			"name": "Delete Event",
 			"request": {
 				"url": {
-					"raw": "http://localhost:3000/deleteEvent?EventDate=20-10-88&StartTime=0600",
+					"raw": "http://localhost:3000/events/deleteEvent?EventDate=28-03-88&StartTime=0600",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"events",
 						"deleteEvent"
 					],
 					"query": [
 						{
 							"key": "EventDate",
-							"value": "20-10-88",
+							"value": "28-03-88",
 							"equals": true,
 							"description": ""
 						},
@@ -192,7 +196,7 @@
 		{
 			"name": "Add Plan",
 			"request": {
-				"url": "http://localhost:3000/addPlan",
+				"url": "http://localhost:3000/plans/addPlan",
 				"method": "POST",
 				"header": [
 					{
@@ -203,7 +207,47 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"PlanID\": 4,\n        \"StartDate\": \"20-10-88\",\n        \"EndDate\": \"20-10-88\",\n        \"TotalBudget\": 60\n}"
+					"raw": "{\n        \"PlanID\": 6,\n        \"StartDate\": \"28-03-87\",\n        \"EndDate\": \"28-03-87\",\n        \"TotalBudget\": 60\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Plan",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/plans/updatePlan?PlanID=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"plans",
+						"updatePlan"
+					],
+					"query": [
+						{
+							"key": "PlanID",
+							"value": "6",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"StartDate\": \"29-05-91\",\n        \"EndDate\": \"18-12-99\",\n        \"TotalBudget\": 100000\n}"
 				},
 				"description": ""
 			},
