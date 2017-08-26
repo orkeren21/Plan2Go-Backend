@@ -66,7 +66,6 @@ app.delete('/deleteAttraction', function(req, res){
 });
 
 app.post('/updateAttraction', function(req, res){
-    //TODO: Does not work, need to look into it
     var newValues = req.body;
 
     var params = {
@@ -74,7 +73,7 @@ app.post('/updateAttraction', function(req, res){
         Key: {
             "AttractionID": parseInt(req.query.AttractionID)
         },
-        UpdateExpression: "set info.Title = :t, info.ExtraInfo=:e, info.Price=:p, info.VisitDuration=:d, info.AttractionLocation=:l, info.OpeningTimes=:o",
+        UpdateExpression: "set Title = :t, ExtraInfo=:e, Price=:p, VisitDuration=:d, AttractionLocation=:l, OpeningTimes=:o",
         ExpressionAttributeValues:{
             ":t": newValues.Title,
             ":e": newValues.ExtraInfo,
@@ -154,6 +153,7 @@ app.post('/addPlan', function(req, res){
 
 app.get('/getAllEvents', function(req, res) {
     //TODO: Need to look into this more in detail
+    //Cannot join Plan + Events since this is not relational DB
     var params = {
         TableName: "Attractions",
         Key: {
@@ -174,22 +174,18 @@ app.get('/getAllEvents', function(req, res) {
 
 
 app.post('/updatePlan', function(req, res){
-    //TODO: Does not work, need to look into it
     var newValues = req.body;
 
     var params = {
-        TableName: "Attractions",
+        TableName: "Plans",
         Key: {
-            "AttractionID": parseInt(req.query.AttractionID)
+            "PlanID": parseInt(req.query.PlanID)
         },
-        UpdateExpression: "set info.Title = :t, info.ExtraInfo=:e, info.Price=:p, info.VisitDuration=:d, info.AttractionLocation=:l, info.OpeningTimes=:o",
+        UpdateExpression: "set StartDate = :sd, EndDate=:ed, TotalBudget=:tb",
         ExpressionAttributeValues:{
-            ":t": newValues.Title,
-            ":e": newValues.ExtraInfo,
-            ":p": parseInt(newValues.Price),
-            ":d": parseInt(newValues.VisitDuration),
-            ":l": newValues.AttractionLocation,
-            ":o": newValues.OpeningTimes
+            ":sd": newValues.StartDate,
+            ":ed": newValues.EndDate,
+            ":tb": parseInt(newValues.TotalBudget)
         }
     };
 
