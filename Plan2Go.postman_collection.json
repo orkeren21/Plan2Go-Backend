@@ -207,7 +207,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"PlanID\": 6,\n        \"StartDate\": \"28-03-87\",\n        \"EndDate\": \"28-03-87\",\n        \"TotalBudget\": 60\n}"
+					"raw": "{\n        \"PlanID\": 6,\n        \"StartDate\": \"28-03-87\",\n        \"EndDate\": \"28-03-87\",\n        \"TotalBudget\": 60,\n        \"EventsList\": []\n}"
 				},
 				"description": ""
 			},
